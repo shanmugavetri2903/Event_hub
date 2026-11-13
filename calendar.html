@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Calendar | Event Hub</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="nav-inner">
+                <a class="logo" href="index.html"><span class="logo-mark">EH</span>Event Hub</a>
+                    <button class="menu" id="menuBtn">☰</button>
+                    <div class="nav-links" id="navLinks">
+                        <a href="index.html">Home</a><a href="events.html">Events</a>
+                        <a href="calendar.html">Calendar</a>
+                        <a href="my-registrations.html">My Registrations</a>
+                        <a href="organizer.html">Organizer</a>
+                    </div>
+                    <div class="nav-actions"><a class="btn btn-primary" href="create-event.html">+ Create Event</a></div>
+                    </div>
+                </nav>
+                <main>
+                    <section class="container">
+                        <div class="section-head">
+                            <div>
+                                <h1>2026 Event Calendar</h1>
+                                <p>Every month has a featured event. Click an event on the calendar for details.</p>
+                            </div>
+                        </div>
+                        <div class="calendar">
+                            <div class="calendar-head">
+                                <button class="btn btn-light" id="prevMonth">← Previous</button>
+                                <h2 id="calendarTitle">January 2026</h2>
+                                <button class="btn btn-light" id="nextMonth">Next →</button>
+                            </div>
+                            <div class="calendar-grid" id="calendarGrid">
+                            </div>
+                        </div>
+                    </section>
+                </main>
+                <button class="chat-button" onclick="toggleChat()" aria-label="Open chatbot">💬</button>
+                <div class="chatbox" id="chatbox">
+                    <div class="chat-head"><div>
+                        <b>Event Hub Assistant</b>
+                        <div style="font-size:11px;opacity:.85">Ask anything about our events</div>
+                    </div>
+                    <button onclick="toggleChat()">×</button>
+                </div>
+                <div class="messages" id="messages">
+                    <div class="msg bot">Hi! 👋 Ask me anything about our events — dates, venues, speakers, seats, organizers, months or registration.</div>
+                </div>
+                <div class="chat-input">
+                    <input id="chatInput" placeholder="Ask your question..." onkeydown="if(event.key==='Enter')sendChat()">
+                    <button onclick="sendChat()">Send</button>
+                </div>
+            </div>
+            <div class="toast" id="toast">
+            </div>
+            <footer class="footer">
+                <div class="footer-inner">
+                    <div>
+                        <h3>Event Hub</h3>
+                        <p>Discover workshops, conferences, competitions and career events throughout 2026.</p>
+                    </div>
+                    <div>
+                        <h3>Explore</h3>
+                        <a href="events.html">All Events</a>
+                        <a href="calendar.html">12-Month Calendar</a>
+                        <a href="my-registrations.html">My Registrations</a>
+                    </div>
+                    <div>
+                        <h3>Organizers</h3>
+                        <a href="create-event.html">Create Event</a>
+                        <a href="organizer.html">Organizer Dashboard</a>
+                    </div>
+                </div>
+                <div class="copyright">© 2026 Event Hub · Built with HTML5, CSS3 & Vanilla JavaScript</div>
+            </footer>
+            <script src="script.js"></script>
+        </body>
+        </html>
